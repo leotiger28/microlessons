@@ -22,17 +22,25 @@ public class LoggingAspect {
     @Pointcut("@annotation(Loggable)")
     public void annotateLoggableMethod() {
     }
+
+    @Around("@annotation(Loggable)")
+    public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
+        long start = System.currentTimeMillis();
+        logger.info("[Around старт] " + joinPoint.getSignature().getName() + " parameters =" + CollectionUtils.arrayToList(joinPoint.getArgs()));
+        Object proceed = joinPoint.proceed();
+        logger.info("[Around финиш] " + joinPoint.getSignature().getName() + " result= " + proceed + " время выполнения (ms) " + (System.currentTimeMillis() - start));
+        return proceed;
+    }
+
     @Before("annotateLoggableMethod()")
     public void logMethodNameAndParameters(JoinPoint jp) {
         tempTimer = System.currentTimeMillis();
-        String methodName = jp.getSignature().getName();
-        logger.info("[Before] Вызов метода " + methodName + " с параметрами = " + CollectionUtils.arrayToList(jp.getArgs()));
+        logger.info("[Before] Вызов метода " + jp.getSignature().getName() + " с параметрами = " + CollectionUtils.arrayToList(jp.getArgs()));
     }
 
     @After("annotateLoggableMethod()")
     public void logMethodName(JoinPoint jp) {
-        String methodName = jp.getSignature().getName();
-        logger.info("[After] Метод завершен " + methodName + " время выполнения (ms) " + (System.currentTimeMillis() - tempTimer));
+        logger.info("[After] Метод завершен " + jp.getSignature().getName() + " время выполнения (ms) " + (System.currentTimeMillis() - tempTimer));
     }
 
     @AfterThrowing(pointcut = "execution(public Greeting com.example.restservice.GreetingController.*(..))", throwing = "result")
@@ -42,15 +50,5 @@ public class LoggingAspect {
     @AfterReturning(pointcut = "execution(public Greeting com.example.restservice.GreetingController.*(..))", returning = "result")
     public void logAfterReturning(JoinPoint joinPoint, Object result) {
         logger.info("[AfterReturning] Успешное завершение " + joinPoint.getSignature().getName() + " return value: " + result.toString());
-    }
-
-    @Around("@annotation(Loggable)")
-    public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
-        long start = System.currentTimeMillis();
-        logger.info("[Around старт] " + joinPoint.getSignature().getName() + " parameters =" + CollectionUtils.arrayToList(joinPoint.getArgs()));
-        Object proceed = joinPoint.proceed();
-        long executionTime = System.currentTimeMillis() - start;
-        logger.info("[Around финиш] " + joinPoint.getSignature().getName() + " result= " + proceed + " время выполнения (ms) " + executionTime);
-        return proceed;
     }
 }
