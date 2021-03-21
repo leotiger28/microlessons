@@ -1,0 +1,12 @@
+2021-03-21 21:44:15.688  INFO 16548 --- [           main] ru.leo.springDemo.log.LoggingAspect      : Вызван метод createGreeting параметры: {bodyParams={id=28, content=LeoTiger}}
+2021-03-21 21:44:15.742  INFO 16548 --- [           main] ru.leo.springDemo.log.LoggingAspect      : Результат: {"id":4,"user":"LeoTiger","content":"Здравствуй, ученик, LeoTiger!"}
+2021-03-21 21:44:15.743  INFO 16548 --- [           main] ru.leo.springDemo.log.LoggingAspect      : Вызван метод updateGreeting параметры: {bodyParams={id=28, content=LeoTiger28}, id=4}
+2021-03-21 21:44:15.776  INFO 16548 --- [           main] ru.leo.springDemo.log.LoggingAspect      : Результат: {"id":4,"user":"LeoTiger28","content":"Здравствуй, ученик, LeoTiger28!"}
+2021-03-21 21:44:15.777  INFO 16548 --- [           main] ru.leo.springDemo.log.LoggingAspect      : Вызван метод greeting параметры: {id=4}
+2021-03-21 21:44:15.778  INFO 16548 --- [           main] ru.leo.springDemo.log.LoggingAspect      : Результат: {"id":4,"user":"LeoTiger28","content":"Здравствуй, ученик, LeoTiger28!"}
+2021-03-21 21:44:15.778  INFO 16548 --- [           main] ru.leo.springDemo.log.LoggingAspect      : Вызван метод greetings параметры: {}
+2021-03-21 21:44:15.941  INFO 16548 --- [           main] ru.leo.springDemo.log.LoggingAspect      : Результат: [{"id":1,"user":"Вася","content":"Здравствуй, ученик, Вася!"},{"id":2,"user":"Петя","content":"Здравствуй, ученик, Петя!"},{"id":3,"user":"Коля","content":"Здравствуй, ученик, Коля!"},{"id":4,"user":"LeoTiger28","content":"Здравствуй, ученик, LeoTiger28!"}]
+2021-03-21 21:44:15.941  INFO 16548 --- [           main] ru.leo.springDemo.log.LoggingAspect      : Вызван метод deleteGreeting параметры: {id=4}
+2021-03-21 21:44:15.951  INFO 16548 --- [           main] ru.leo.springDemo.log.LoggingAspect      : Результат: null
+2021-03-21 21:44:15.952  INFO 16548 --- [           main] ru.leo.springDemo.log.LoggingAspect      : Вызван метод greetings параметры: {}
+2021-03-21 21:44:15.953  INFO 16548 --- [           main] ru.leo.springDemo.log.LoggingAspect      : Результат: [{"id":1,"user":"Вася","content":"Здравствуй, ученик, Вася!"},{"id":2,"user":"Петя","content":"Здравствуй, ученик, Петя!"},{"id":3,"user":"Коля","content":"Здравствуй, ученик, Коля!"}]
