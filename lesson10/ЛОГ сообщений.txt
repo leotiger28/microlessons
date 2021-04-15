@@ -1,4 +1,0 @@
-2021-04-15 19:37:37.805  INFO 35072 --- [           main] r.leo.springdemo.RestServiceApplication  : Started RestServiceApplication in 10.226 seconds (JVM running for 10.671)
-2021-04-15 19:37:37.817  INFO 35072 --- [container-0-C-1] o.s.c.s.b.k.KafkaMessageChannelBinder$2  : anonymous.511a67b2-9c20-4f21-b358-75fee09d5428: partitions assigned: [greetings-pub-0]
-2021-04-15 19:38:00.776 DEBUG 35072 --- [container-0-C-1] r.leo.springdemo.events.MessageListener  : Сообщение получателю : Hello user
-2021-04-15 19:38:50.413 DEBUG 35072 --- [container-0-C-1] r.leo.springdemo.events.MessageListener  : Сообщение всем : Hello anybody
