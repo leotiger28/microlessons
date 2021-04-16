@@ -1,0 +1,14 @@
+[INFO] Reactor Summary for Parent for demo 1.01.01-SNAPSHOT:
+[INFO] 
+[INFO] Parent for demo .................................... SUCCESS [  0.005 s]
+[INFO] Database for demo .................................. SUCCESS [  6.697 s]
+[INFO] Microservice for demo .............................. SUCCESS [ 39.101 s]
+[INFO] demo ............................................... SUCCESS [  5.412 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  52.074 s
+[INFO] Finished at: 2021-04-16T20:53:17+03:00
+[INFO] ------------------------------------------------------------------------
+
+Process finished with exit code 0
