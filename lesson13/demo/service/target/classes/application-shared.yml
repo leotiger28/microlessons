@@ -1,0 +1,17 @@
+
+spring:
+  profiles:
+    include: >
+      actuator,
+      chaos-engineering,
+      data-source,
+      dslogging,
+      feign,
+      jpa,
+      kafka,
+      license,
+      logging,
+      messages,
+      rest-template,
+      security,
+      swagger

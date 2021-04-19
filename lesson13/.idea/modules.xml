@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo/service/demo.iml" filepath="$PROJECT_DIR$/demo/service/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/bundle/demo-bundle.iml" filepath="$PROJECT_DIR$/demo/bundle/demo-bundle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/database/demo-db.iml" filepath="$PROJECT_DIR$/demo/database/demo-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo-parent.iml" filepath="$PROJECT_DIR$/demo/demo-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/lesson13.iml" filepath="$PROJECT_DIR$/.idea/lesson13.iml" />
+    </modules>
+  </component>
+</project>
